@@ -1,0 +1,27 @@
+h1 {
+color:purple;
+background-color:aqua;
+font-family: Helvetica;
+}
+ 
+p{
+    color: green;
+    font-size: 8pt;
+    font-family: 'Times New Roman';
+}
+
+p{
+    color: red;
+
+}
+#mission{
+    font-style: italic ;
+    font-weight: bold ;
+    font-size: 32pt ;
+}
+
+.shout
+{
+    color: red;
+    font-family: cursive;
+}

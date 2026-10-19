@@ -1,0 +1,13 @@
+.special {
+    color: red;
+    font-family: sans-serif;
+}
+
+.shout {
+    color: blue;
+    font-size: 32pt;
+}
+.special .cool {
+    color: purple;
+    font-size: 32pt;
+}

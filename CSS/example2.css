@@ -1,0 +1,18 @@
+p, h1, h2 {
+  color: green;
+}
+h2 {
+  background-color: yellow;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 8pt;
+    color: blue;
+}
+
+h1 {
+    color: pink;
+}
+
+/* This is how you make a comment
