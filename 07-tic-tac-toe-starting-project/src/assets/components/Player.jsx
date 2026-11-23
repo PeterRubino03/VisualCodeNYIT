@@ -1,22 +1,23 @@
-//Player
+//player
 import { useState } from "react";
-export default function Player({name, symbol}){
-    const [isEditing, setIsEditing] = useState();
-    // make a function that runs when we click edit
+export default function Player({initialName, symbol}){
+    const [isEditing, setIsEditing] = useState(false);
+    const [playerName, setPlayerName] = useState(initialName);
     function handleEditClick(){
-        setIsEditing(editing=>!isEditing);
+        setIsEditing((editing)=>!editing);
     }
-    // track if we are editing or not already
-    // have a variable represent the content we are seeing where the name is now 
-    let playerName= <span className="player-name">{name}</span>;
+    function handleChange(event){
+        setPlayerName(event.target.value);
+    }
+    let editablePlayerName = <span className="player-name">{playerName}</span>;
     if(isEditing){
-        playerName= <input type="text" required value={name}/>
+        editablePlayerName = <input type="text" required value={playerName} onChange={handleChange}/>
     }
+
     return(
         <li>
             <span className="player">
-                {playerName}
-                <span className="player-name">{name}</span>
+                {editablePlayerName}
                 <span id="player-symbol">{symbol}</span>
             </span>
             <button onClick={handleEditClick}>{isEditing ? 'Save' : 'Edit'}</button>
